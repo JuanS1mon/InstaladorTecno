@@ -6,4 +6,4 @@ def ActuaConfig(): #Actualizar nombre y base del server
     actualizar_config(NombreServer, NombreBase)  # Funcion para actualizar el config
 
 ActuaConfig() #Llama a la función donde se ingresan los datos, a esta función debería apuntar el front, así el front nunca tiene conexión con el verdadero back
-conn=conexion() #Función para verificar que todo funciona ok
+conn=conexion() #Función para verificar que todo funciona
