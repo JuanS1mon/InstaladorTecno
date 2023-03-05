@@ -3,8 +3,8 @@ from PyQt5 import uic, QtWidgets, QtCore
 from PyQt5.QtCore import Qt, QPropertyAnimation,QEasingCurve
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from db import *
-from VerifSO
-
+from VerifSO import *
+from backoffice import *
 from Diccionario import errores
 
 #Crearmos la clase principal de el entorno grafico
@@ -14,7 +14,7 @@ class Ventana_Principal(QMainWindow):
         uic.loadUi('sistema.ui', self)
 
         # comunicacion con la base de datos
-        self.basededatos = conexion()
+        #self.basededatos = conexion()
 
         #Saca Barra FEA
         window = QMainWindow()
@@ -41,8 +41,12 @@ class Ventana_Principal(QMainWindow):
         self.B_conexion.clicked.connect(conexion)
 
         #Trae datos de Info.Sys para arielito
-        #variables = funcion
-        self.l_info.
+        self.B_info.clicked.connect(VerifSo)
+
+        #Instalador - Actualiza campos en BD.
+        #fantasia, cuit, RazonSocial, Direccion, CantCajas, ClienteID=self.completa_Sistema()
+        self.B_Update.clicked.connect(self.completa_Sistema)
+
 
 
 
@@ -72,23 +76,18 @@ class Ventana_Principal(QMainWindow):
                 self.showMaximized()
             else:
                 self.showNormal()
+
     #Valores a llenar para la tabla Sistema de tecnolar.
     def completa_Sistema(self):
-        Fantasia = self.T_Fantasia.text().upper()
-        RazonSocial =self.T_RazonSocial.text().upper()
-        Direccion = self.T_Direccion.text().upper()
-        Cuit = self.T_Direccion.text().upper()
-        Clienteweb = self.T_ClienteWeb.text().upper()
-        Empresa = self.T_Direccion.text().upper()
-        Sucursal = self.T_Sucursal.text().upper()
-        cajas = self.T_Cajas.text().upper()
+        fantasia = self.T_Fantasia.text()
+        RazonSocial =self.T_RazonSocial.text()
+        Direccion = self.T_Direccion.text()
+        cuit = self.T_Cuit.text()
+        ClienteID = self.T_ClienteWeb.text()
+        CantCajas = self.T_Cajas.text()
+        BackOffice(fantasia, cuit, RazonSocial, Direccion, CantCajas, ClienteID)
 
-        #Validacion de campos.
-        if Fantasia != '' or RazonSocial != '' or Direccion != '' or Cuit != '' or Clienteweb != '' or empresa != '' or Sucursal != '' or cajas != '' :
-            print('a')
-        else:
-            print('b')
-
+        #return fantasia, cuit, RazonSocial, Direccion, CantCajas, ClienteID
 
 
 

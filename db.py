@@ -29,7 +29,7 @@ def leer_cfg():
 def conexion():
     try:
         server,base=leer_cfg() #Trae los valores de la función en forma de lista y los guarda en las variables que corresponder
-        #print(server,base)
+
     except:
 
         Error=errores(2)
@@ -43,9 +43,9 @@ def conexion():
     try:
         conexion= pyodbc.connect('DRIVER={SQL server};SERVER='+server+';DATABASE='+base+';UID='+user+';PWD='+Pass)
 
-        print('Conexion exitosa')
+        #print('Conexion exitosa')
 
-        return conexion
+        return  conexion
     except:
         Error=errores(3)
 
@@ -82,8 +82,4 @@ def actualizar_config(NombreServer,NombreBase):
         Error=errores(1)
 
 
-
-
-
-
-
+conexion()
