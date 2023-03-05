@@ -698,7 +698,7 @@ front:77 10ot &quot;Terminal&quot;;
              <item>
               <widget class="QStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page_instalador">
                 <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1378,7 +1378,7 @@ front:77 10ot &quot;Terminal&quot;;
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="BChequeo_5">
+                     <widget class="QPushButton" name="B_Update">
                       <property name="font">
                        <font>
                         <family>Terminal</family>
@@ -1413,8 +1413,16 @@ border-radius:20px;
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <item>
                   <widget class="QLabel" name="L_info">
+                   <property name="font">
+                    <font>
+                     <family>Terminal</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
-                    <string>TextLabel</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#f1f1f1;&quot;&gt;El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña toca el saxofón detrás del palenque de paja. 1234567890&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="wordWrap">
                     <bool>true</bool>
@@ -1451,7 +1459,7 @@ border-radius:20px;
   <tabstop>T_Empresa</tabstop>
   <tabstop>T_Sucursal</tabstop>
   <tabstop>T_Cajas</tabstop>
-  <tabstop>BChequeo_5</tabstop>
+  <tabstop>B_Update</tabstop>
   <tabstop>B_Instalador</tabstop>
   <tabstop>B_info</tabstop>
   <tabstop>pushButton_9</tabstop>
