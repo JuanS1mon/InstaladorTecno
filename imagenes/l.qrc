@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>mensaje1.png</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>ayuda1.png</file>
+  </qresource>
+</RCC>
